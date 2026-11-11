@@ -27,11 +27,16 @@ body{
     margin:0;
 
     list-style: none;
+
+    justify-content: center;
     display:flex;
     gap:40px;
 }
 
 #nav{
+
     text-decoration: none;
+
+    font-size:medium;
     color:black;
 }
