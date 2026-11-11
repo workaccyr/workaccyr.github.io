@@ -1,3 +1,5 @@
+//Nav Hover Logic Goes Here
+
 let navListItem = document.querySelectorAll(".nav");
 
 navListItem.forEach(function(nav) {
