@@ -37,6 +37,8 @@ body{
     display: flex;
     align-items: center;
 
+
+    font-size: medium;
     list-style: none;
     gap:40px;
 }
@@ -46,6 +48,7 @@ body{
     text-decoration: none;
     color:black;
 
+    font-size: medium;
     background-color:lightskyblue;
     border-radius: 0%;
 }
