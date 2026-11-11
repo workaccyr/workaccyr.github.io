@@ -9,3 +9,9 @@ body{
     width: 100%;
     height: 50px;
 }
+
+#navlist{
+    list-style: none;
+    display:flex;
+    gap:30px;
+}
