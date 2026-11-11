@@ -1,13 +1,19 @@
+let navListItem = document.querySelectorAll(".nav");
 
-let nav = document.querySelectorAll(".nav");
-nav.addEventListener("mouseenter",function(){
+navListItem.forEach(function(nav) {
 
-    nav.style.fontSize = "30px";
-    nav.style.color = "rgb(68, 68, 68)";
-})
+  nav.addEventListener("mouseenter", function() {
 
-nav.addEventListener("mouseleave", function(){
+    nav.style.font="35px !important";
+    nav.style.color="rgb(68, 68, 68)";
+    
+  });
 
-    nav.style.font = "25px";
-    nav.style.color = "black";
-})
+  nav.addEventListener("mouseleave", function() {
+
+    nav.style.font="25px !important";
+    nav.style.color="black;
+
+  });
+
+});
