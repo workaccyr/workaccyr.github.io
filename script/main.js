@@ -1,5 +1,5 @@
 
-let nav = document.getElementById("nav");
+let nav = document.querySelectorAll(".nav");
 nav.addEventListener("mouseenter",function(){
 
     nav.style.fontSize = "30px";

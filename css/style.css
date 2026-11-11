@@ -53,7 +53,7 @@ body{
     gap:50px;
 }
 
-#nav{
+.nav{
     padding: 5px;
     text-decoration: none;
     color:black;
