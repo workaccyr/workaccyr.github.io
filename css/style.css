@@ -63,3 +63,7 @@ body{
     font-weight: 600;
 }
 
+.nav:hover{
+    font-size: 30px;
+    color:dimgray;
+}
