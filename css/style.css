@@ -23,6 +23,7 @@ body{
 
     display: flex; 
     align-items: center;
+    justify-content: flex-start;
 
     width: 100%;
     height: 85px;
@@ -32,10 +33,9 @@ body{
 
     display:flex;
     align-items: center;
-    justify-content: flex-start !important;
 
     height:85px;
-    width: 125px;px;
+    width: 135px;
 
 }
 
@@ -43,9 +43,12 @@ body{
     padding: 0;
     margin:0;
 
+    position: absolute;      
+    left: 50%;                   
+    transform: translateX(-50%); /*forcefully centers selections*/
+
     display: flex;
     align-items: center;
-    justify-content: center !important;
     list-style: none;
     gap:40px;
 }
