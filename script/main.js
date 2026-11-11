@@ -5,7 +5,7 @@ let navListItem = document.querySelectorAll(".nav");
 navListItem.forEach(function(nav) {
 
   nav.addEventListener("mouseenter", function() {
-    nav.style.fontSize = "35px";
+    nav.style.fontSize = "30px";
     nav.style.color = "rgb(68, 68, 68)";
   });
 
