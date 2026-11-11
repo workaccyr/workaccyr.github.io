@@ -28,6 +28,12 @@ body{
     width: 100%;
     height: 85px;
 }
+#nav_selection{
+    
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
 
 #navlist{
     padding: 0;
