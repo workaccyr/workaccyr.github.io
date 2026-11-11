@@ -1,4 +1,4 @@
-/*Header Rule Definitons*/
+/*document rule definition*/
 
 * {
     margin: 0;
@@ -9,9 +9,10 @@
 body{
     margin: 0;
     padding: 0;
-
     width: 100%;
 }
+
+/*Header Rule Definitons*/
 
 .header-site{
     padding: 0;
@@ -34,20 +35,19 @@ body{
 
     display: flex;
     align-items: center;
-
-
-  
     list-style: none;
     gap:40px;
 }
 
 #nav{
     padding: 5px;
-
     text-decoration: none;
     color:black;
 
     font-size: 20px !important;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif; /*google imported font*/
+    font-weight: 600;
+
+    background-color:rgb(223, 248, 255);
     border-radius: 10%;
 }
