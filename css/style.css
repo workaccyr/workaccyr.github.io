@@ -26,9 +26,11 @@ body{
     padding: 0;
     margin:0;
   
-
     display:flex;
+
     justify-content:flex-start;
+    align-items:flex-start;
+
     list-style: none;
     gap:40px;
 }
