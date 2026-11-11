@@ -33,6 +33,7 @@ body{
 
     display:flex;
     align-items: center;
+    margin-right: auto;
 
     height:85px;
     width: 150px;
@@ -43,14 +44,11 @@ body{
     padding: 0;
     margin:0;
 
-    position: absolute;      
-    left: 50%;                   
-    transform: translateX(-50%); /*forcefully centers selections*/
-
     display: flex;
     align-items: center;
-    list-style: none;
+    margin-right: auto;
 
+    list-style: none;
     gap:40px;
 }
 
