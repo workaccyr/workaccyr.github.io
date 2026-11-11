@@ -35,7 +35,7 @@ body{
     align-items: center;
 
     height:85px;
-    width: 135px;
+    width: 150px;
 
 }
 
@@ -50,6 +50,7 @@ body{
     display: flex;
     align-items: center;
     list-style: none;
+
     gap:40px;
 }
 
