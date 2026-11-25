@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recipe Vault | Profile & Sign In</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="brand">
+        <img src="images/website_logo.png" alt="Logo" />
+        <span>WorkAccyr Recipes</span>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Recipes</a></li>
+          <li><a href="planning.html">Meal Planner</a></li>
+          <li><a href="tracking.html">Food Log</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="profile.html" class="active" id="nav-profile-link">Sign In</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Logged Out View -->
+    <div id="auth-forms" class="grid-2">
+      <div class="card">
+        <h2>Sign In</h2>
+        <p style="color: var(--muted); margin-bottom: 1rem;">Access your saved recipes, meal plans, and daily logs.</p>
+        <form id="login-form">
+          <div class="form-group">
+            <label for="login-email">Email</label>
+            <input type="email" id="login-email" required placeholder="you@example.com" />
+          </div>
+          <div class="form-group">
+            <label for="login-password">Password</label>
+            <input type="password" id="login-password" required placeholder="••••••••" />
+          </div>
+          <button type="submit" class="btn btn-primary">Sign In</button>
+        </form>
+      </div>
+
+      <div class="card">
+        <h2>Create Account</h2>
+        <p style="color: var(--muted); margin-bottom: 1rem;">Stored locally in your browser—no server required.</p>
+        <form id="register-form">
+          <div class="form-group">
+            <label for="reg-name">Display Name</label>
+            <input type="text" id="reg-name" required placeholder="Alex Chef" />
+          </div>
+          <div class="form-group">
+            <label for="reg-email">Email</label>
+            <input type="email" id="reg-email" required placeholder="you@example.com" />
+          </div>
+          <div class="form-group">
+            <label for="reg-password">Password</label>
+            <input type="password" id="reg-password" required minlength="4" placeholder="Min 4 characters" />
+          </div>
+          <button type="submit" class="btn btn-accent">Create Account</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Logged In View -->
+    <div id="profile-dashboard" class="card hidden">
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+        <div>
+          <span class="badge">Active Local Session</span>
+          <h2 id="profile-name">Welcome, User!</h2>
+          <p id="profile-email" style="color: var(--muted);"></p>
+        </div>
+        <button id="logout-btn" class="btn btn-danger">Sign Out</button>
+      </div>
+
+      <hr style="margin: 1.5rem 0; border: none; border-top: 1px solid var(--border);" />
+
+      <div class="grid-3">
+        <div class="card" style="box-shadow: none; background: var(--bg);">
+          <h3 id="stat-recipes">0</h3>
+          <p>Total Saved Recipes</p>
+        </div>
+        <div class="card" style="box-shadow: none; background: var(--bg);">
+          <h3 id="stat-favorites">0</h3>
+          <p>Favorite Recipes</p>
+        </div>
+        <div class="card" style="box-shadow: none; background: var(--bg);">
+          <h3 id="stat-logs">0</h3>
+          <p>Logged Meals</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 WorkAccyr Recipe & Meal Tracker. Local Client-Side Storage.</p>
+  </footer>
+
+  <script src="script/main.js"></script>
+</body>
+</html>
