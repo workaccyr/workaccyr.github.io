@@ -1,1 +1,70 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recipe Vault | Meal Planner</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="brand">
+        <img src="images/website_logo.png" alt="Logo" />
+        <span>WorkAccyr Recipes</span>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Recipes</a></li>
+          <li><a href="planning.html" class="active">Meal Planner</a></li>
+          <li><a href="tracking.html">Food Log</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="profile.html" id="nav-profile-link">Sign In</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <h1>Weekly Meal Planner</h1>
+        <p>Assign your saved recipes to specific days of the week.</p>
+      </div>
+      <button id="clear-plan-btn" class="btn btn-accent">Clear Week</button>
+    </section>
+
+    <section class="card" style="margin-bottom: 2rem;">
+      <h2>Add Recipe to Schedule</h2>
+      <form id="planner-form" class="grid-3" style="align-items: end;">
+        <div class="form-group" style="margin-bottom: 0;">
+          <label for="plan-day">Day of the Week</label>
+          <select id="plan-day">
+            <option value="Monday">Monday</option>
+            <option value="Tuesday">Tuesday</option>
+            <option value="Wednesday">Wednesday</option>
+            <option value="Thursday">Thursday</option>
+            <option value="Friday">Friday</option>
+            <option value="Saturday">Saturday</option>
+            <option value="Sunday">Sunday</option>
+          </select>
+        </div>
+        <div class="form-group" style="margin-bottom: 0;">
+          <label for="plan-recipe">Select Saved Recipe</label>
+          <select id="plan-recipe" required></select>
+        </div>
+        <button type="submit" class="btn btn-primary">Assign to Day</button>
+      </form>
+    </section>
+
+    <div id="planner-grid" class="grid-3"></div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 WorkAccyr Recipe & Meal Tracker. Local Client-Side Storage.</p>
+  </footer>
+
+  <script src="script/main.js"></script>
+</body>
+</html>

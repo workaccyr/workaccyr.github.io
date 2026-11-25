@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recipe Vault | About</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="brand">
+        <img src="images/website_logo.png" alt="Logo" />
+        <span>WorkAccyr Recipes</span>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Recipes</a></li>
+          <li><a href="planning.html">Meal Planner</a></li>
+          <li><a href="tracking.html">Food Log</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="profile.html" id="nav-profile-link">Sign In</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="card" style="margin-bottom: 1.5rem;">
+      <h2>About WorkAccyr Recipe Logger</h2>
+      <p style="margin-bottom: 1rem;">
+        This application is a 100% client-side web app built with semantic HTML5, responsive CSS3, and vanilla JavaScript. 
+        It runs seamlessly on static hosting (such as GitHub Pages) with zero backend servers required.
+      </p>
+      <ul style="margin-left: 1.5rem; margin-bottom: 1rem;">
+        <li><strong>Local Authentication:</strong> Create accounts and sign in using browser <code>localStorage</code>.</li>
+        <li><strong>Recipe Management:</strong> Create, search, categorize, and favorite custom recipes.</li>
+        <li><strong>Meal Planning & Tracking:</strong> Organize weekly menus and monitor daily calorie intake.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Data Management</h3>
+      <p style="color: var(--muted); margin-bottom: 1rem;">
+        Because all data is stored locally in your browser, clearing your browser cache will erase saved recipes. You can export a JSON backup below.
+      </p>
+      <button id="export-data-btn" class="btn btn-outline">Download JSON Backup</button>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 WorkAccyr Recipe & Meal Tracker. Local Client-Side Storage.</p>
+  </footer>
+
+  <script src="script/main.js"></script>
+</body>
+</html>
