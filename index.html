@@ -2,42 +2,119 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     
-    <link rel="stylesheet" href="css/style.css">
-    <script src="script/main.js" defer></script>
-    
-    <!--importing google fonts-->
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recipe Vault | Home</title>
+  <link rel="stylesheet" href="css/style.css" />
+  
 </head>
-
 <body>
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="brand">
+        <img src="images/website_logo.png" alt="Logo" />
+        <span>WorkAccyr Recipes</span>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="active">Recipes</a></li>
+          <li><a href="planning.html">Meal Planner</a></li>
+          <li><a href="tracking.html">Food Log</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="profile.html" id="nav-profile-link">Sign In</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <img src="images/website_logo.png" id="logo_image">
-    <header class="header-site">
-        <nav id="navigation">
-            <ul id="navlist">
+  <main>
+    <section class="hero">
+      <div>
+        <h1 id="welcome-banner">Your Personal Recipe & Nutrition Hub</h1>
+        <p>Log custom recipes, save favorites, and organize your weekly meals—saved right in your browser.</p>
+      </div>
+      <a href="#add-recipe-section" class="btn btn-accent">+ Log New Recipe</a>
+    </section>
 
-                <li><a href="profile.html" class="nav">User</a></li>
-                <li><a href="planning.html" class="nav">Plan</a></li>
-                <li><a href="tracking.html" class="nav">Track</a></li>
-                <li><a href="about.html" class="nav">About</a></li>
+    <div id="auth-warning" class="alert hidden">
+      You are currently browsing as a guest. <a href="profile.html"><strong>Sign in or create an account</strong></a> to tie saved recipes and logs to your profile!
+    </div>
 
+    <!-- Search & Filter Bar -->
+    <section class="card" style="margin-bottom: 2rem;">
+      <div class="grid-2">
+        <div class="form-group" style="margin-bottom:0;">
+          <label for="search-input">Search Recipes</label>
+          <input type="text" id="search-input" placeholder="Search by title or ingredient..." />
+        </div>
+        <div class="form-group" style="margin-bottom:0;">
+          <label for="category-filter">Filter by Category</label>
+          <select id="category-filter">
+            <option value="All">All Categories</option>
+            <option value="Breakfast">Breakfast</option>
+            <option value="Lunch">Lunch</option>
+            <option value="Dinner">Dinner</option>
+            <option value="Snack">Snack / Dessert</option>
+            <option value="Favorites">★ Saved Favorites</option>
+          </select>
+        </div>
+      </div>
+    </section>
 
-            </ul>
-        </nav>
-    </header>
+    <!-- Recipe List -->
+    <h2 style="margin-bottom: 1rem;">Saved Recipes</h2>
+    <div id="recipe-grid" class="grid-3" style="margin-bottom: 3rem;"></div>
 
-    <main class="main-site">Text Goes Here</main>
+    <!-- Add New Recipe Form -->
+    <section id="add-recipe-section" class="card">
+      <h2>Log a New Recipe</h2>
+      <form id="recipe-form">
+        <div class="grid-2">
+          <div class="form-group">
+            <label for="recipe-title">Recipe Title *</label>
+            <input type="text" id="recipe-title" required placeholder="e.g., Garlic Herb Chicken Bowl" />
+          </div>
+          <div class="form-group">
+            <label for="recipe-category">Category *</label>
+            <select id="recipe-category">
+              <option value="Breakfast">Breakfast</option>
+              <option value="Lunch">Lunch</option>
+              <option value="Dinner">Dinner</option>
+              <option value="Snack">Snack / Dessert</option>
+            </select>
+          </div>
+        </div>
 
+        <div class="grid-2">
+          <div class="form-group">
+            <label for="recipe-time">Prep & Cook Time (mins)</label>
+            <input type="number" id="recipe-time" value="25" min="1" />
+          </div>
+          <div class="form-group">
+            <label for="recipe-calories">Calories per Serving</label>
+            <input type="number" id="recipe-calories" value="450" min="0" />
+          </div>
+        </div>
 
+        <div class="form-group">
+          <label for="recipe-ingredients">Ingredients (comma separated) *</label>
+          <textarea id="recipe-ingredients" rows="2" required placeholder="Chicken breast, olive oil, garlic, brown rice, broccoli"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="recipe-instructions">Preparation Instructions *</label>
+          <textarea id="recipe-instructions" rows="3" required placeholder="1. Season chicken... 2. Cook rice..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Save Recipe</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 WorkAccyr Recipe & Meal Tracker. Local Client-Side Storage.</p>
+  </footer>
+
+  <script src="script/main.js"></script>
 </body>
-
-
-
 </html>
